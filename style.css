@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 50px;
+  color: #f38721;
+}
+
+.stopwatch {
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(49, 49, 49);
+}
+
+.switch-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.switch-container > *:not(:last-child) {
+  margin-right: 20px;
+}
+
+.switch-container span {
+  color: #fff;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #f38721;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #f38721;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.img-container {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.img-container img {
+  height: 100%;
+  object-fit: cover;
+}
+
+p {
+  font-size: 80px;
+  color: #fff;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.555);
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+  p {
+    font-size: 50px;
+  }
+}
+
+span {
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 15px 35px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+}

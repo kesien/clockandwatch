@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Egyszerű stopper</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Válassz módot</h2>
+      <div class="switch-container">
+        <span>Stopper</span>
+        <label class="switch">
+          <input type="checkbox" class="checkbox" />
+          <span class="slider round"></span>
+        </label>
+        <span>Óra</span>
+      </div>
+      <div class="stopwatch">
+        <div class="img-container">
+          <img src="./watch.png" alt="Stopwatch" />
+        </div>
+        <p>
+          <span class="minutes">00</span> - <span class="seconds">00</span> -
+          <span class="miliseconds">00</span>
+        </p>
+        <div class="buttons">
+          <button class="start">Start</button>
+          <button class="stop">Stop</button>
+          <button class="reset">Reset</button>
+        </div>
+      </div>
+      <div class="clock hidden">
+        <div class="img-container">
+          <img src="./clock.png" alt="Clock" />
+        </div>
+        <p>
+          <span class="hours">00</span>:<span class="clock-minutes">00</span
+          >:<span class="clock-seconds">00</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
